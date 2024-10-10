@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 12px;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+/*# sourceMappingURL=ToggleTheme.css.map */
