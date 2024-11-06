@@ -3,6 +3,11 @@
 @import '../../autre/mixin';
 
 //code général
+#navbar{
+  @include flex(column,none,space-around);
+  width: 100%;
+  height: 75%;
+}
 
 //code mobile
 @media screen and (min-width: 378px){

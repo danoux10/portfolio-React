@@ -3,13 +3,50 @@
 @import '../../autre/mixin';
 
 //code général
+.header-link{
+  @include flex(column,center,space-around);
+  @include buttonAnimationBackground();
+  transition: color ease .5s;
+  position: relative;
+  border: 2px solid $accent;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  .icon-content{
+    @include square(40%);
+    svg{
+      transition: all ease .5s;
+      @include square(100%);
+    }
+  }
+}
 
 //code mobile
 @media screen and (min-width: 378px){
-
+  .header-link{
+    height: 20rem;
+    font-size: 220%;
+  }
 }
 
 //code laptop
 @media screen and (min-width: 1280px){
-  
+  .header-link{
+    height: 10rem;
+    font-size: 125%;
+    &:nth-child(1){
+      font-size: 100%;
+    }
+    &.active{
+      &:before{
+        background: $accent;
+        width: 100%;
+      }
+      &:hover{
+        &:before{
+          width: 0;
+        }
+      }
+    }
+  }
 }

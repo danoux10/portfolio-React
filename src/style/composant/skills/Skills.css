@@ -18,4 +18,44 @@ button {
   border: none;
 }
 
+#skills {
+  width: 100%;
+  height: 100%;
+}
+#skills section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+#skills section .tech-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 45%;
+}
+
+@media screen and (min-width: 378px) {
+  #skills section .tech-content {
+    flex-wrap: wrap;
+  }
+  #skills section .tech-content#front-tech {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #skills section .tech-content#front-tech {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
 /*# sourceMappingURL=Skills.css.map */

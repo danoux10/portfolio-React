@@ -1,0 +1,160 @@
+@import '../src/style/autre/reset';
+@import '../src/style/autre/variable';
+@import '../src/style/autre/mixin';
+
+
+body.dark-mode {
+  //background: $dark;
+  color: $light;
+  --theme-background: #{$dark};
+  --theme-color: #{$light};
+  //link header
+  #nav-content {
+    border-color: $light;
+    //sublink theme-toggle
+    #theme-toggle {
+      border-color: $light;
+      flex-direction: row;
+      &:hover{
+        .icon-content{
+          background: $light;
+          svg{
+            &#dark-icon {
+              @include hidden;
+            }
+            &#light-icon {
+              @include square(90%);
+              transform: scale(1);
+            }
+          }
+        }
+      }
+      .icon-content{
+        border-color: $light;
+        &#light-icon {
+          @include hidden;
+        }
+      }
+    }
+    //sublink navbar-toggle
+    #navbar {
+      a {
+        color: $light;
+        &.active{
+          color:$dark;
+          &:hover{
+            color: $light;
+            .icon-content{
+              svg{
+                fill: $light;
+              }
+            }
+          }
+          .icon-content{
+            svg{
+              fill: $dark;
+            }
+          }
+        }
+        &:hover {
+          color: $dark;
+          .icon-content {
+            color: $dark;
+            svg{
+              fill: $dark;
+            }
+          }
+        }
+        .icon-content {
+          svg {
+            fill: $light;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.light-mode{
+  //background: $light;
+  color: $dark;
+  --theme-background: #{$light};
+  --theme-color: #{$dark};
+  //link header
+  #nav-content{
+    border-color:$dark;
+    //sublink theme-toggle
+    #theme-toggle{
+      border-color: $dark;
+      flex-direction: row-reverse;
+      &:hover{
+        .icon-content{
+          background: $dark;
+          svg{
+            &#dark-icon {
+              @include square(90%);
+              transform: scale(1);
+            }
+            &#light-icon {
+              @include hidden;
+            }
+          }
+        }
+      }
+      .icon-content{
+        background:$dark;
+        border-color: $dark;
+        svg{
+          &#dark-icon {
+            @include hidden;
+          }
+          &#light-icon {
+            @include square(90%);
+            transform: scale(1);
+          }
+        }
+      }
+    }
+    //sublink navbar-toggle
+    #navbar{
+      a{
+        color:$dark;
+        &.active{
+          color:$light;
+          &:hover{
+            color: $dark;
+            .icon-content{
+              svg{
+                fill: $dark;
+              }
+            }
+          }
+          .icon-content{
+            svg{
+              fill: $light;
+            }
+          }
+        }
+        &:hover{
+          color: $light;
+          .icon-content{
+            svg{
+              fill: $light;
+            }
+          }
+        }
+        .icon-content{
+          svg{
+            fill: $dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+//body {
+//  transition: background ease .5s;
+//  --gradient : #{$medium};
+//  background: linear-gradient(140deg, var(--theme-background) 0%, var(--gradient) 100%);;
+//}

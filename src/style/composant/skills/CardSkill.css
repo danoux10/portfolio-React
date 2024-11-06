@@ -18,4 +18,60 @@ button {
   border: none;
 }
 
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-card h3 {
+  text-transform: uppercase;
+}
+.skill-card .icon-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.skill-card .icon-content svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--theme-color);
+  transition: all ease 0.5s;
+}
+.skill-card canvas {
+  transition: all ease 0.5s;
+}
+
+@media screen and (min-width: 378px) {
+  .skill-card {
+    width: 15rem;
+    height: 20rem;
+    gap: 10%;
+  }
+  .skill-card h3 {
+    font-size: 2rem;
+  }
+  .skill-card .icon-content {
+    width: 35%;
+  }
+  .skill-card canvas {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .skill-card {
+    width: 20rem;
+    gap: 1.5rem;
+  }
+  .skill-card h3 {
+    font-size: 1.5rem;
+  }
+  .skill-card .icon-content {
+    width: 25%;
+  }
+  .skill-card canvas {
+    width: 50%;
+  }
+}
+
 /*# sourceMappingURL=CardSkill.css.map */

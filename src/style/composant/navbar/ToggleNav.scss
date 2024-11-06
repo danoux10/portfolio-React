@@ -3,6 +3,17 @@
 @import '../../autre/mixin';
 
 //code général
+#navbar-toggle {
+  position: relative;
+  transition: all ease .5s;
+  width: 50%;
+  &.active{
+    transform: rotate(180deg);
+  }
+  svg{
+    fill:$accent;
+  }
+}
 
 //code mobile
 @media screen and (min-width: 378px){
@@ -11,5 +22,29 @@
 
 //code laptop
 @media screen and (min-width: 1280px){
-
+  #navbar-toggle{
+    cursor:pointer;
+    &:before{
+      position:absolute;
+      content: '';
+      z-index: -1;
+      transition: width ease .5s;
+      border-radius: 10px;
+      height: 100%;
+      width: 0;
+      right: 0;
+    }
+    &:hover{
+      svg{
+        fill: $dark;
+      }
+      &:before{
+        background: $accent;
+        width: 100%;
+      }
+    }
+    svg{
+      transition : fill ease .5s;
+    }
+  }
 }

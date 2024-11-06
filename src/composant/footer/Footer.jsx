@@ -13,11 +13,11 @@ import GithubIcon from "../icons/GithubIcon";
 const Footer = () => {
   return (
       <footer id={'footbar'}>
-        <LinkFoot url={'tel:+33615245156'} icon={<PhoneIcon/>} label={"0615245156"}/>
-        <LinkFoot url={'mailto:monEmail@mail.fr'} icon={<MailIcon/>} label={"monEmain@email.fr"}/>
-        <LinkFoot url={'../../src/data/cv.pdf'} icon={<CvIcon/>} label={"mon CV"}/>
-        <LinkFoot url={""} icon={<LinkedinIcon/>}/>
-        <LinkFoot url={""} icon={<GithubIcon/>}/>
+        <LinkFoot url={'tel:+33615245156'} icon={<PhoneIcon/>} label={'0615245156'}/>
+        <LinkFoot url={'mailto:monEmail@mail.fr'} icon={<MailIcon/>} label={'monEmail@mail.fr'}/>
+        <LinkFoot url={'../../src/data/cv.pdf'} icon={<CvIcon/>} label={'mon CV'}/>
+        <LinkFoot url={''} icon={<LinkedinIcon/>}/>
+        <LinkFoot url={''} icon={<GithubIcon/>}/>
       </footer>
   );
 };

@@ -3,13 +3,55 @@
 @import '../../autre/mixin';
 
 //code général
+.skill-card {
+  @include flex(column,center,none);
+  h3 {
+    text-transform: uppercase;
+  }
+  .icon-content {
+    @include flex(row,center,center);
+    svg {
+      @include square(100%);
+      fill: var(--theme-color);
+      transition: all ease .5s;
+    }
+  }
+  canvas {
+    transition: all ease .5s;
+  }
+}
 
 //code mobile
 @media screen and (min-width: 378px){
-
+  .skill-card {
+    width: 15rem;
+    height: 20rem;
+    gap: 10%;
+    h3 {
+      font-size: 2rem;
+    }
+    .icon-content {
+      width: 35%;
+    }
+    canvas {
+      width: 60%;
+    }
+  }
 }
 
 //code laptop
 @media screen and (min-width: 1280px){
-
+  .skill-card {
+    width: 20rem;
+    gap: 1.5rem;
+    h3 {
+      font-size: 1.5rem;
+    }
+    .icon-content {
+      width: 25%;
+    }
+    canvas {
+      width: 50%;
+    }
+  }
 }

@@ -18,4 +18,68 @@ button {
   border: none;
 }
 
+.header-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: color ease 0.5s;
+  position: relative;
+  border: 2px solid #00e8be;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header-link:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: width ease 0.5s;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+}
+.header-link:hover {
+  color: #393b44;
+}
+.header-link:hover .icon-content svg {
+  fill: #393b44;
+}
+.header-link:hover:before {
+  background: #00e8be;
+  width: 100%;
+}
+.header-link .icon-content {
+  width: 40%;
+  height: 40%;
+}
+.header-link .icon-content svg {
+  transition: all ease 0.5s;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 378px) {
+  .header-link {
+    height: 20rem;
+    font-size: 220%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header-link {
+    height: 10rem;
+    font-size: 125%;
+  }
+  .header-link:nth-child(1) {
+    font-size: 100%;
+  }
+  .header-link.active:before {
+    background: #00e8be;
+    width: 100%;
+  }
+  .header-link.active:hover:before {
+    width: 0;
+  }
+}
+
 /*# sourceMappingURL=LinkNav.css.map */

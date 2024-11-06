@@ -18,4 +18,77 @@ button {
   border: none;
 }
 
+.foot-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.5rem;
+  color: #393b44;
+}
+.foot-link:before, .foot-link:after {
+  content: "";
+  position: absolute;
+  transition: width ease 0.5s;
+  background: #00e8be;
+  border-radius: 50px;
+  z-index: 1;
+  height: 0.2rem;
+  width: 100%;
+}
+.foot-link:before {
+  top: 0;
+  left: 0;
+}
+.foot-link:after {
+  bottom: 0;
+  right: 0;
+}
+.foot-link:hover:before, .foot-link:hover:after {
+  width: 0;
+}
+.foot-link:hover:before {
+  left: 0;
+}
+.foot-link:hover:after {
+  right: 0;
+}
+.foot-link .icon-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.foot-link .icon-content svg {
+  width: 100%;
+  height: 100%;
+  fill: #393b44;
+}
+.foot-link p {
+  margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 378px) {
+  .foot-link {
+    height: 65%;
+  }
+  .foot-link .icon-content {
+    width: 4rem;
+    height: 4rem;
+  }
+  .foot-link p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .foot-link {
+    height: 65%;
+  }
+  .foot-link .icon-content {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 /*# sourceMappingURL=LinkFoot.css.map */

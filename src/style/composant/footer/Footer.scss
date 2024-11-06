@@ -3,10 +3,16 @@
 @import '../../autre/mixin';
 
 //code général
+#footbar{
+  @include flex(row,center,space-around);
+  width: 100%;
 
+}
 //code mobile
 @media screen and (min-width: 378px){
-
+  #footbar{
+    height: 6vh;
+  }
 }
 
 //code laptop

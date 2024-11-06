@@ -3,10 +3,24 @@
 @import '../../autre/mixin';
 
 //code général
-
+#title{
+  @include flex(row,center,space-around);
+  padding-top: .5rem;
+  .profile-picture{
+    width: 5%;
+    img{
+      @include square(100%);
+      border-radius: 100px;
+    }
+  }
+}
 //code mobile
 @media screen and (min-width: 378px){
-
+  #title{
+    h1{
+      font-size:250%;
+    }
+  }
 }
 
 //code laptop

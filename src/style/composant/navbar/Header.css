@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 12px;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+#header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  border-right: 2px solid #393b44;
+  padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 378px) {
+  #header-content {
+    width: 25vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #header-content {
+    width: 6vw;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */

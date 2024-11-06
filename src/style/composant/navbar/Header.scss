@@ -1,0 +1,25 @@
+@import '../../autre/reset';
+@import '../../autre/variable';
+@import '../../autre/mixin';
+
+//code général
+#header-content{
+  @include flex(column,center,space-around);
+  height: 100vh;
+  border-right: 2px solid $dark;//update color
+  padding: 0 .5rem;
+}
+
+//code mobile
+@media screen and (min-width: 378px) {
+  #header-content{
+    width: 25vw;
+  }
+}
+
+//code laptop
+@media screen and (min-width: 1280px) {
+ #header-content{
+   width: 6vw;
+ }
+}

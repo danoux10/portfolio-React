@@ -3,13 +3,43 @@
 @import '../../autre/mixin';
 
 //code général
+.foot-link{
+  @include flex(row,center,center);
+  position: relative;
+  padding: .5rem;
+  color: $dark;//del
+  @include  buttonAnimationOpenClose;
+  .icon-content{
+    @include flex(row,center,center);
+    svg{
+      @include square(100%);
+      fill : $dark;
+    }
+  }
+  p{
+    margin-left: .5rem;
+  }
+}
 
 //code mobile
-@media screen and (min-width: 378px){
-
+@media screen and (min-width: 378px) {
+  .foot-link{
+    height: 65%;
+    .icon-content{
+      @include square(4rem);
+    }
+    p{
+      font-size: 1.5rem;
+    }
+  }
 }
 
 //code laptop
-@media screen and (min-width: 1280px){
-
+@media screen and (min-width: 1280px) {
+  .foot-link {
+    height: 65%;
+    .icon-content {
+      @include square(2rem);
+    }
+  }
 }

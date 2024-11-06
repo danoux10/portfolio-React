@@ -18,4 +18,40 @@ button {
   border: none;
 }
 
+.App {
+  display: flex;
+  flex-direction: row;
+}
+.App main {
+  width: 100%;
+}
+.App main .page-container {
+  overflow: auto;
+  height: 81vh;
+}
+.App main .page-container::-webkit-scrollbar {
+  width: 0.5rem;
+  border-radius: 50px;
+}
+.App main .page-container::-webkit-scrollbar-thumb {
+  width: 100%;
+  border-radius: 10px;
+  background: var(--theme-color);
+}
+.App main .page-container article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App main .page-container article h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1280px) {
+  .page-container {
+    height: 81%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

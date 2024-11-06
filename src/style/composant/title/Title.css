@@ -18,4 +18,26 @@ button {
   border: none;
 }
 
+#title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+}
+#title .profile-picture {
+  width: 5%;
+}
+#title .profile-picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+
+@media screen and (min-width: 378px) {
+  #title h1 {
+    font-size: 250%;
+  }
+}
+
 /*# sourceMappingURL=Title.css.map */

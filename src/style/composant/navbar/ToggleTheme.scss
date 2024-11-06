@@ -3,13 +3,49 @@
 @import '../../autre/mixin';
 
 //code général
+#theme-toggle{
+  @include flex(row,center,none);
+  border: 1px solid $dark;//del
+  border-radius: 50px;
+  padding: .5rem;
+  .icon-container{
+    @include flex(row,center,center);
+    position: relative;
+    transition: all ease .5s;
+    border: 1px solid $dark;//del
+    border-radius: 50px;
+    padding: .2rem;
+    .icon-content{
+      position: absolute;
+      transition: all ease .5s;
+      @include square(80%);
+      svg{
+        fill: $accent;
+        @include  square(100%);
+      }
+    }
+  }
+}
 
 //code mobile
 @media screen and (min-width: 378px){
-
+  #theme-toggle{
+    border: none;
+    .icon-container{
+      @include square(6rem);
+    }
+  }
 }
 
 //code laptop
 @media screen and (min-width: 1280px){
-
+  #theme-toggle{
+    border:1px solid;
+    cursor: pointer;
+    width: 8rem;
+    height: 4.4rem;
+    .icon-container{
+      @include square(3rem);
+    }
+  }
 }

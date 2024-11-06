@@ -3,6 +3,19 @@
 @import '../../autre/mixin';
 
 //code général
+#projects{
+  @include square(100%);
+  section {
+    @include flex(row,none,space-around);
+    @include square(100%);
+    @include scrollbar(.5rem,none,$accent);
+    flex-wrap: wrap;
+    gap: 5rem;
+    position: relative;
+    margin-right: .5rem;
+    overflow: auto;
+  }
+}
 
 //code mobile
 @media screen and (min-width: 378px){

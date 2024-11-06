@@ -2,15 +2,17 @@ import React from 'react';
 
 import '../../style/composant/skills/Skills.css'
 
-import CardSkill from "./Composant/CardSkill";
-
-//icons
-
+import FrontTech from "./composant/FrontTech";
+import BackTech from "./composant/BackTech";
 const Skills = () => {
   return (
-      <div>
-        
-      </div>
+      <article id={'skills'}>
+        <h2>Compétences</h2>
+        <section>
+          <FrontTech/>
+          <BackTech/>
+        </section>
+      </article>
   );
 };
 

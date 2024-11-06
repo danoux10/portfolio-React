@@ -18,4 +18,18 @@ button {
   border: none;
 }
 
+#footbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+@media screen and (min-width: 378px) {
+  #footbar {
+    height: 6vh;
+  }
+}
+
 /*# sourceMappingURL=Footer.css.map */
