@@ -4,7 +4,6 @@
 
 .App {
   @include flex(row, none, none);
-
   main {
     width: 100%;
     .page-container {

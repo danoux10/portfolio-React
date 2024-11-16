@@ -12,11 +12,13 @@
   border-radius: 10px;
   font-weight: bold;
   text-transform: uppercase;
+  color: var(--theme-color);
   .icon-content{
     @include square(40%);
     svg{
       transition: all ease .5s;
       @include square(100%);
+      fill: var(--theme-color)
     }
   }
 }

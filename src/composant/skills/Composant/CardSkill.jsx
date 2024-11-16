@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../../style/composant/skills/CardSkill.css'
+import '../../../style/composant/skills/CardSkill.css';
 
 const CardSkill = ({label,icon,data}) => {
   return (

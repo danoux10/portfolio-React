@@ -29,6 +29,7 @@ button {
   border-radius: 10px;
   font-weight: bold;
   text-transform: uppercase;
+  color: var(--theme-color);
 }
 .header-link:before {
   content: "";
@@ -57,6 +58,7 @@ button {
   transition: all ease 0.5s;
   width: 100%;
   height: 100%;
+  fill: var(--theme-color);
 }
 
 @media screen and (min-width: 378px) {

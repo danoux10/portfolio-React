@@ -5,14 +5,14 @@
 //code général
 #theme-toggle{
   @include flex(row,center,none);
-  border: 1px solid $dark;//del
+  border: 1px solid;
   border-radius: 50px;
   padding: .5rem;
   .icon-container{
     @include flex(row,center,center);
     position: relative;
     transition: all ease .5s;
-    border: 1px solid $dark;//del
+    border: 1px solid;
     border-radius: 50px;
     padding: .2rem;
     .icon-content{
@@ -25,6 +25,69 @@
       }
     }
   }
+}
+
+//theme code
+body{
+ &.light-mode{
+   #theme-toggle{
+     border-color: $dark;
+     flex-direction: row-reverse;
+     &:hover{
+       .icon-container{
+         background: $dark;
+         svg{
+           &#dark-icon {
+             @include square(90%);
+             transform: scale(1);
+           }
+           &#light-icon {
+             @include hidden;
+           }
+         }
+       }
+     }
+     .icon-container{
+       background:$dark;
+       border-color: $dark;
+       svg{
+         &#dark-icon {
+           @include hidden;
+         }
+         &#light-icon {
+           @include square(90%);
+           transform: scale(1);
+         }
+       }
+     }
+   }
+ }
+ &.dark-mode{
+   #theme-toggle {
+     border-color: $light;
+     flex-direction: row;
+     &:hover{
+       .icon-container{
+         background: $light;
+         svg{
+           &#dark-icon {
+             @include hidden;
+           }
+           &#light-icon {
+             @include square(90%);
+             transform: scale(1);
+           }
+         }
+       }
+     }
+     .icon-container{
+       border-color: $light;
+       &#light-icon {
+         @include hidden;
+       }
+     }
+   }
+ }
 }
 
 //code mobile

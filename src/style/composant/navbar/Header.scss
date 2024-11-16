@@ -6,14 +6,45 @@
 #header-content{
   @include flex(column,center,space-around);
   height: 100vh;
-  border-right: 2px solid $dark;//update color
+  border-right: 2px solid var(--theme-color);//update color
   padding: 0 .5rem;
+  &.close {
+    #navbar-toggle {
+      transition: all ease .5s;
+      width: 80%;
+    }
+
+    #theme-toggle {
+      border: none;
+      width: 100%;
+    }
+
+    #navbar {
+      a {
+        .icon-content {
+          width: 100%;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 //code mobile
 @media screen and (min-width: 378px) {
   #header-content{
     width: 25vw;
+    &.close {
+      width: 10vw;
+      #navbar {
+        a {
+          height: 10rem;
+        }
+      }
+    }
   }
 }
 
@@ -21,5 +52,13 @@
 @media screen and (min-width: 1280px) {
  #header-content{
    width: 6vw;
+   &.close {
+     width: 2vw;
+     #navbar {
+       a {
+         height: 5rem;
+       }
+     }
+   }
  }
 }

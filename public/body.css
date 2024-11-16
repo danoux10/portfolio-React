@@ -143,4 +143,10 @@ body.light-mode #nav-content #navbar a .icon-content svg {
   fill: #393b44;
 }
 
+body {
+  transition: background ease 0.5s;
+  --gradient: #7A7A7A;
+  background: linear-gradient(140deg, var(--theme-background) 0%, var(--gradient) 100%);
+}
+
 /*# sourceMappingURL=body.css.map */

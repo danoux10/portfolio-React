@@ -22,7 +22,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid #393b44;
+  border: 1px solid;
   border-radius: 50px;
   padding: 0.5rem;
 }
@@ -33,7 +33,7 @@ button {
   justify-content: center;
   position: relative;
   transition: all ease 0.5s;
-  border: 1px solid #393b44;
+  border: 1px solid;
   border-radius: 50px;
   padding: 0.2rem;
 }
@@ -47,6 +47,63 @@ button {
   fill: #00e8be;
   width: 100%;
   height: 100%;
+}
+
+body.light-mode #theme-toggle {
+  border-color: #393b44;
+  flex-direction: row-reverse;
+}
+body.light-mode #theme-toggle:hover .icon-container {
+  background: #393b44;
+}
+body.light-mode #theme-toggle:hover .icon-container svg#dark-icon {
+  width: 90%;
+  height: 90%;
+  transform: scale(1);
+}
+body.light-mode #theme-toggle:hover .icon-container svg#light-icon {
+  width: 0;
+  height: 0;
+  transform: scale(0);
+}
+body.light-mode #theme-toggle .icon-container {
+  background: #393b44;
+  border-color: #393b44;
+}
+body.light-mode #theme-toggle .icon-container svg#dark-icon {
+  width: 0;
+  height: 0;
+  transform: scale(0);
+}
+body.light-mode #theme-toggle .icon-container svg#light-icon {
+  width: 90%;
+  height: 90%;
+  transform: scale(1);
+}
+body.dark-mode #theme-toggle {
+  border-color: #f1f3f8;
+  flex-direction: row;
+}
+body.dark-mode #theme-toggle:hover .icon-container {
+  background: #f1f3f8;
+}
+body.dark-mode #theme-toggle:hover .icon-container svg#dark-icon {
+  width: 0;
+  height: 0;
+  transform: scale(0);
+}
+body.dark-mode #theme-toggle:hover .icon-container svg#light-icon {
+  width: 90%;
+  height: 90%;
+  transform: scale(1);
+}
+body.dark-mode #theme-toggle .icon-container {
+  border-color: #f1f3f8;
+}
+body.dark-mode #theme-toggle .icon-container#light-icon {
+  width: 0;
+  height: 0;
+  transform: scale(0);
 }
 
 @media screen and (min-width: 378px) {

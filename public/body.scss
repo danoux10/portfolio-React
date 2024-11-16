@@ -153,8 +153,8 @@ body.light-mode{
   }
 }
 
-//body {
-//  transition: background ease .5s;
-//  --gradient : #{$medium};
-//  background: linear-gradient(140deg, var(--theme-background) 0%, var(--gradient) 100%);;
-//}
+body {
+  transition: background ease .5s;
+  --gradient : #{$medium};
+  background: linear-gradient(140deg, var(--theme-background) 0%, var(--gradient) 100%);;
+}
