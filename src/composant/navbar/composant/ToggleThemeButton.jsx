@@ -1,21 +1,15 @@
-import React,{useState} from 'react';
+import React from 'react';
+import {useTheme} from "../../themeProvider";
 
 import '../../../style/composant/navbar/ToggleTheme.css';
 
 import ThemeIconD from "../../icons/navbar/ThemeIconD";
 import ThemeIconL from "../../icons/navbar/ThemeIconL";
 const ToggleThemeButton = () => {
-  const [theme,setTheme] = useState('dark-mode');
-  const [isActive,setIsActive] = useState(false);
+  const {theme, toggleTheme} = useTheme();
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark-mode' ? 'light-mode' : 'dark-mode';
-    setTheme(newTheme);
-    setIsActive(!isActive);
-    document.body.className = newTheme;
-  }
   return (
-      <div id={'theme-toggle'} onClick={toggleTheme} className={`toggle-btn ${isActive ? 'active' : ''}`}>
+      <div id={'theme-toggle'} onClick={toggleTheme} className={`toggle-btn ${theme === 'dark-mode'?'':'active'}`}>
         <span className={'icon-container'}>
           <ThemeIconD/>
           <ThemeIconL/>

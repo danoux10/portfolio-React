@@ -8,6 +8,37 @@
   border: 1px solid;
   border-radius: 50px;
   padding: .5rem;
+  &:hover{
+    .icon-container{
+      background: $light;
+      svg{
+        &#dark-icon {
+          @include hidden;
+        }
+        &#light-icon {
+          @include square(90%);
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  &.active{
+    flex-direction: row-reverse;
+    &:hover{
+      .icon-container{
+        background: $dark;
+        svg{
+          &#dark-icon {
+            @include square(90%);
+            transform: scale(1);
+          }
+          &#light-icon {
+            @include hidden;
+          }
+        }
+      }
+    }
+  }
   .icon-container{
     @include flex(row,center,center);
     position: relative;

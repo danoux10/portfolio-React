@@ -10,9 +10,6 @@ const CardProject = ({name,tech,capture,lien,description,github}) => {
       <div className={'project-card'}>
         <header className={'header-card'}>
           <h3>{name}</h3>
-          <div className={'toggle-card'}>
-            <span className={'card-size'}></span>
-          </div>
         </header>
 
         <ul className={'tech-used'}>
@@ -23,7 +20,6 @@ const CardProject = ({name,tech,capture,lien,description,github}) => {
 
         <aside className={'project-view'}>
           <img src={capture} alt="capture du site"/>
-          <iframe src={lien}></iframe>
         </aside>
 
         <div className={'paragraph-content'}>
