@@ -7,16 +7,16 @@ import MysqlIcon from "../../icons/skill/back/MysqlIcon";
 import SymfonyIcon from "../../icons/skill/back/SymfonyIcon";
 
 const BackCard = [
-    {label: 'php', icon : <PhpIcon/>,value :80},
-    {label:'mysql', icon : <MysqlIcon/>,value :80},
-    {label:'symfony', icon : <SymfonyIcon/>,value :10},
+    {color:'#787cb5',label: 'php', icon : <PhpIcon/>,value :80},
+    {color:'#f29111',label:'mysql', icon : <MysqlIcon/>,value :80},
+    {color:'#1a171b',label:'symfony', icon : <SymfonyIcon/>,value :10},
 ]
 
 const BackTech = () => {
   return (
       <div id={"back-tech"} className={'tech-content'}>
         {BackCard.map((item, index)=>(
-            <CardSkill key={index} label={item.label} icon={item.icon} value={item.value}/>
+            <CardSkill key={index} color={item.color} label={item.label} icon={item.icon} value={item.value}/>
         ))}
       </div>
   );

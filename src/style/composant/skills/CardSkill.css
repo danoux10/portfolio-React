@@ -18,10 +18,53 @@ button {
   border: none;
 }
 
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 5px 5px 10px var(--color);
+  }
+  50% {
+    box-shadow: 2px 2px 2px var(--color);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    border-color: var(--theme-color);
+  }
+  50% {
+    border-color: var(--color);
+  }
+}
 .skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 0.5rem;
+  transition: all ease 0.5s;
+  padding: 1rem 0 0 0;
+  position: relative;
+  border: 2px outset;
+  z-index: 0;
+  animation: 5s ease 0.5s infinite pulse;
+  background: transparent;
+}
+.skill-card:hover {
+  cursor: pointer;
+}
+.skill-card:hover:before {
+  height: 100%;
+  background: var(--color);
+}
+.skill-card:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+  border-radius: inherit;
+  width: 100%;
+  height: 0;
+  transition: height ease 0.5s;
 }
 .skill-card h3 {
   text-transform: uppercase;
@@ -60,17 +103,22 @@ button {
 }
 @media screen and (min-width: 1280px) {
   .skill-card {
-    width: 20rem;
+    width: 10rem;
     gap: 1.5rem;
   }
   .skill-card h3 {
     font-size: 1.5rem;
   }
   .skill-card .icon-content {
-    width: 25%;
+    width: 50%;
+    aspect-ratio: 16/9;
+  }
+  .skill-card .icon-content svg {
+    width: 100%;
+    height: 100%;
   }
   .skill-card canvas {
-    width: 50%;
+    width: 80%;
   }
 }
 

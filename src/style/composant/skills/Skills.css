@@ -43,11 +43,6 @@ button {
   #skills section .tech-content {
     flex-wrap: wrap;
   }
-  #skills section .tech-content#front-tech {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-  }
 }
 @media screen and (min-width: 1280px) {
   #skills section .tech-content#front-tech {

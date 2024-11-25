@@ -22,11 +22,6 @@
     section {
       .tech-content {
         flex-wrap: wrap;
-        &#front-tech {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          justify-items: center;
-        }
       }
     }
   }
