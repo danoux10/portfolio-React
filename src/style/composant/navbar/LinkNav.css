@@ -75,6 +75,10 @@ button {
   .header-link:nth-child(1) {
     font-size: 100%;
   }
+  .header-link:hover:before {
+    width: 100%;
+    background: #00e8be;
+  }
   .header-link.active:before {
     background: #00e8be;
     width: 100%;

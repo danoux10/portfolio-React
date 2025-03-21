@@ -39,6 +39,12 @@
     &:nth-child(1){
       font-size: 100%;
     }
+    &:hover{
+      &:before{
+        width: 100%;
+        background: $accent;
+      }
+    }
     &.active{
       &:before{
         background: $accent;

@@ -2,8 +2,8 @@ import React from 'react';
 
 import '../../style/composant/skills/Skills.css'
 
-import FrontTech from "./composant/FrontTech";
-import BackTech from "./composant/BackTech";
+import FrontTech from "./Composant/FrontTech";
+import BackTech from "./Composant/BackTech";
 const Skills = () => {
   return (
       <article id={'skills'}>
